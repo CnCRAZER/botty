@@ -1,6 +1,8 @@
 # <img src="assets/docs/header_green.png" width="370">
 
-Pixelbot for Diablo 2 Resurrected. This project is for informational and educational purposes only.
+Pixelbot for Diablo 2 Resurrected. This project is for informational and educational purposes only and is not meant for online usage. Feel free to dig around, add stuff, make PRs, or ask questions should you get stuck!
+
+[**Download here**](https://github.com/aeon0/botty/releases) and got to have a [**Discord**](https://discord.gg/Jf3J8cuXWg) nowadays I guess :man_shrugging:
 
 ## Getting started & Prerequisites
 - D2R needs to be in English Language,
@@ -26,6 +28,11 @@ You can either run from python. Follow [development.md](development.md) for that
 ## Development
 
 Check out the [development.md](development.md) docu for infos on how to build from source and details of the project structure and code.
+
+## Support this project 💓
+
+You can support this project by giving feedback, reporting bugs, or creating pull requests.
+Contributions are welcome, and we encourage you to contribute to this project if you would like to help out. Botty is a open source project and almost excessively maintained by contributors (there has been 50+ contributors! <3). In our [**discord**](https://discord.gg/Jf3J8cuXWg) there is a contributor role, and you can ping one of the admins and ask for the role to talk to other contributors! Though you don't need to be in the [**discord**](https://discord.gg/Jf3J8cuXWg) to contribute, we do encourage you to do so.
 
 ## BNIP Pickit
 
@@ -98,9 +105,11 @@ order=run_pindle, run_eldritch
 | ------------------ | -------------------------------------------------------------------------------------------------|
 | type               | Build type. Currently only "sorceress" or "hammerdin" is supported |
 | belt_rows          | Integer value of how many rows the char's belt has |
-| casting_frames     | Depending on your char and fcr you will have a specific casting frame count. Check it here: https://diablo2.diablowiki.net/Breakpoints and fill in the right number. Determines how much delay there is after each teleport for example. If your system has some delay e.g. on vms, you might have to increase this value above the suggest value in the table! |
+| faster_cast_rate   | Set to your character's faster cast rate, will calculate skill cooldowns |
+| extra_casting_frames     | This will cause skills to wait an additional `extra_casting_frames` after calculated cooldown period. Helpful for low-performance. |
 | cta_available      | 0: no cta available, 1: cta is available and should be used during prebuff |
-| safer_routines    | Set to 1 to enable optional defensive maneuvers/etc during combat/runs at the cost of increased runtime (ex. hardcore players)
+| safer_routines    | Set to 1 to enable optional defensive maneuvers/etc during combat/runs at the cost of increased runtime (ex. hardcore players) |
+| use_charged_teleport | 0: Character doesn't teleport or is able to teleport without charges. 1: Character depends on teleport charges to teleport. |
 | num_loot_columns   | Number of columns in inventory used for loot (from left!). Remaining space can be used for charms |
 | force_move         | Hotkey for "force move" |
 | inventory_screen   | Hotkey to open inventory |
